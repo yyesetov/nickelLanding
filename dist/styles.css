@@ -30,7 +30,7 @@ svg { display: block; }
 .brand-mark { width: 38px; height: 32px; flex-shrink: 0; }
 .brand > span { font-size: 1.0625rem; letter-spacing: .1em; font-weight: 650; }
 .brand b { font-weight: 300; }
-.desktop-nav { margin-left: auto; font-size: .9375rem; color: var(--muted); }
+.desktop-nav { display: flex; align-items: center; gap: 28px; margin-left: auto; font-size: .9375rem; color: var(--muted); }
 .desktop-nav a { display: block; padding: 12px 0; transition: color .2s; }
 .desktop-nav a:hover { color: var(--text); }
 .header-actions { display: flex; align-items: center; }
@@ -75,8 +75,14 @@ h2 { margin: 0; font-size: clamp(1.875rem, 3vw, 2.625rem); font-weight: 450; let
 .panel-cta:hover { color: #fff; }
 .panel-cta .icon { width: 20px; height: 20px; }
 .solution-copy.changing { animation: panel-in .24s var(--ease); }
-.contact-band { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+.contact-band { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); align-items: start; gap: clamp(48px, 8vw, 120px); }
+.contact-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
 .contact-band .button { flex-shrink: 0; }
+.contact-phones { display: grid; border-top: 1px solid var(--line); font-style: normal; }
+.contact-phone { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; padding: 16px 0; border-bottom: 1px solid var(--line); color: #dce4f2; font-size: clamp(1.25rem, 2.2vw, 1.625rem); letter-spacing: -.02em; transition: color .2s; }
+.contact-phone > span:last-child { color: var(--muted); font-size: 1.0625rem; transition: color .2s, transform .25s var(--ease); }
+.contact-phone:hover { color: #fff; }
+.contact-phone:hover > span:last-child { color: #fff; transform: translate(2px, -2px); }
 .footer { display: flex; align-items: center; gap: 28px; padding: 28px var(--page-edge); border-top: 1px solid var(--line); }
 .footer-brand .brand-mark { width: 29px; height: 25px; }
 .footer-brand > span { font-size: .875rem; }
@@ -158,7 +164,7 @@ form > .consent { flex-direction: row; align-items: flex-start; gap: 10px; font-
   .task-list { gap: 4px; }
   .task { min-height: 60px; padding: 14px 16px; }
   .solution-panel { min-height: 370px; padding: 26px; }
-  .contact-band { align-items: flex-start; flex-direction: column; gap: 24px; }
+  .contact-band { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .footer { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; }
   .footer-right { grid-column: 1 / -1; margin: 0; font-size: .875rem; }
   .back-top { grid-column: 2; grid-row: 1; }
@@ -171,6 +177,8 @@ form > .consent { flex-direction: row; align-items: flex-start; gap: 10px; font-
   .solution-panel { min-height: 0; padding: 24px 20px; }
   .solution-copy h3 { font-size: 1.625rem; }
   .task { padding-left: 14px; padding-right: 14px; font-size: .9375rem; }
+  .contact-copy { gap: 24px; }
+  .contact-phone { min-height: 68px; font-size: 1.1875rem; }
   dialog { padding: 28px 20px; }
   dialog h2 { font-size: 1.75rem; margin-top: 12px; }
   .success-actions { flex-direction: column; }
