@@ -66,12 +66,10 @@ h2 { margin: 0; font-size: clamp(1.875rem, 3vw, 2.625rem); font-weight: 450; let
 .task.active { background: #192235; border-color: #50628b; color: #f0f3ff; }
 .task.active .icon { color: var(--accent); filter: drop-shadow(0 0 7px #9eb4ff30); }
 .solution-panel { min-width: 0; min-height: 370px; display: flex; flex-direction: column; padding: 32px; border: 1px solid #343f51; border-radius: 16px; background: var(--surface); }
-.solution-copy { flex: 1; }
+.solution-copy { flex: 1; padding-bottom: 28px; }
+.expertise-approach { max-width: 76ch; margin: 32px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
 .solution-copy h3 { margin: 0 0 16px; font-size: clamp(1.625rem, 2.25vw, 2rem); font-weight: 450; line-height: 1.25; letter-spacing: -.025em; overflow-wrap: anywhere; }
 .solution-copy > p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 38em; }
-.solution-examples { display: grid; gap: 6px; padding: 0; margin: 24px 0 28px; list-style: none; font-size: .9375rem; color: #d1d8e4; }
-.solution-examples li { position: relative; padding-left: 18px; overflow-wrap: anywhere; }
-.solution-examples li::before { content: ''; position: absolute; top: .7em; left: 0; width: 5px; height: 5px; background: #8e9db9; border-radius: 50%; }
 .panel-cta { display: flex; justify-content: space-between; align-items: center; gap: 20px; width: 100%; min-height: 54px; padding: 18px 0 0; border-top: 1px solid var(--line); background: transparent; color: #dce4ff; font-size: .9375rem; text-align: left; transition: color .2s; }
 .panel-cta:hover { color: #fff; }
 .panel-cta .icon { width: 20px; height: 20px; }
